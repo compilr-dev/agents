@@ -1,5 +1,15 @@
 # @compilr-dev/agents
 
+```
+      \|/
+    ╭══════════╮     ___  ___  _ __ ___  _ __ (_) |_ __
+    ║'  ▐▌  ▐▌ │    / __|/ _ \| '_ ` _ \| '_ \| | | '__|
+    ║          │   | (__| (_) | | | | | | |_) | | | |
+    ╰─═──────═─╯    \___|\___/|_| |_| |_| .__/|_|_|_|
+      \________\                        | | .dev
+                                        |_| agents
+```
+
 > Lightweight multi-LLM agent library for building CLI AI assistants
 
 [![npm version](https://img.shields.io/npm/v/@compilr-dev/agents.svg)](https://www.npmjs.com/package/@compilr-dev/agents)
