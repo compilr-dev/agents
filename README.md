@@ -17,14 +17,16 @@
 
 ## Features
 
-- **Multi-LLM Support** - Claude, OpenAI GPT-4, Google Gemini, Ollama (local)
-- **Built-in Tools** - 13 tools for file ops, search, bash, and more
-- **Sub-agents** - Spawn specialized agents for complex tasks
+- **Multi-LLM Support** - 9 providers: Claude, OpenAI, Gemini, Ollama (local), Together AI, Groq, Fireworks, Perplexity, OpenRouter
+- **17 Built-in Tools** - File ops, bash, grep, glob, edit, web fetch, sub-agents, todos, backlog, and more
+- **Sub-agents** - Spawn specialized agents for complex tasks (9 built-in agent types)
 - **Context Management** - Token budgeting, compaction, summarization
-- **Skills System** - 11 reusable prompts for common workflows
-- **Safety Features** - Permissions, guardrails, anchors, rehearsal mode
+- **11 Skills** - Reusable prompts for common workflows
+- **Safety Features** - Permissions, 15 built-in guardrails, anchors, rehearsal mode
 - **Streaming** - Real-time event streaming with abort support
+- **Hooks System** - Lifecycle hooks (beforeChat, afterChat, beforeToolCall, afterToolCall)
 - **MCP Integration** - Load tools from MCP servers
+- **Project Memory** - Auto-loads CLAUDE.md, GEMINI.md, CURSOR.md, and more
 
 ## Quick Start
 
@@ -51,22 +53,27 @@ for await (const event of agent.run('Hello!')) {
 
 ```typescript
 import {
-  ClaudeProvider,
-  OpenAIProvider,
-  GeminiProvider,
-  OllamaProvider
+  ClaudeProvider,      // Anthropic Claude
+  OpenAIProvider,      // OpenAI GPT
+  GeminiProvider,      // Google Gemini
+  OllamaProvider,      // Local models (no API key)
+  TogetherProvider,    // Together AI
+  GroqProvider,        // Groq (fast inference)
+  FireworksProvider,   // Fireworks AI
+  PerplexityProvider,  // Perplexity (search-augmented)
+  OpenRouterProvider,  // OpenRouter (multi-provider)
 } from '@compilr-dev/agents';
 
-// Claude (Anthropic)
+// Claude (recommended)
 new ClaudeProvider({ apiKey: 'sk-ant-...' });
 
-// OpenAI GPT-4
+// OpenAI
 new OpenAIProvider({ apiKey: 'sk-...' });
 
-// Google Gemini
+// Gemini
 new GeminiProvider({ apiKey: '...' });
 
-// Ollama (local)
+// Ollama (local, no API key)
 new OllamaProvider({ model: 'llama3' });
 ```
 
@@ -84,9 +91,13 @@ new OllamaProvider({ model: 'llama3' });
 | `glob` | Find files by pattern |
 | `todoWrite` | Manage task list |
 | `todoRead` | Read task list |
+| `backlogRead` | Read backlog items |
+| `backlogWrite` | Manage backlog items |
 | `webFetch` | Fetch URL content |
 | `task` | Spawn sub-agents |
 | `suggest` | Get action suggestions |
+| `askUser` | Ask user questions |
+| `askUserSimple` | Simple yes/no prompts |
 
 ## Sub-agents (Task Tool)
 
@@ -151,6 +162,8 @@ permissions.setPermission('bash', 'once'); // Ask each time
 permissions.setPermission('writeFile', 'session'); // Ask once per session
 ```
 
+**Permission levels:** always, session, once, deny (with wildcard patterns)
+
 ### Guardrails
 
 ```typescript
@@ -175,17 +188,16 @@ import { AnchorManager } from '@compilr-dev/agents';
 - `@anthropic-ai/sdk` (optional, for Claude)
 - `@modelcontextprotocol/sdk` (optional, for MCP)
 
-## Links
-
-- [Website](https://compilr.dev)
-- [Documentation](https://compilr.dev/docs)
-- [npm Package](https://www.npmjs.com/package/@compilr-dev/agents)
-- [GitHub Issues](https://github.com/compilr-dev/agents/issues)
-
 ## Related Packages
 
 - [@compilr-dev/cli](https://www.npmjs.com/package/@compilr-dev/cli) - AI-powered CLI assistant
 - [@compilr-dev/agents-coding](https://www.npmjs.com/package/@compilr-dev/agents-coding) - Coding-specific tools
+
+## Links
+
+- [Website](https://compilr.dev)
+- [npm Package](https://www.npmjs.com/package/@compilr-dev/agents)
+- [Report Issues](https://github.com/compilr-dev/agents/issues)
 
 ## License
 
