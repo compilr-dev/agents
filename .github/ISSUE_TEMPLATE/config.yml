@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://compilr.dev/docs/agents/overview
+    about: Check the documentation before filing an issue
+  - name: Tutorial
+    url: https://compilr.dev/docs/agents/creating-your-first-agent
+    about: New to the library? Start with the tutorial

@@ -1,0 +1,57 @@
+name: Feature Request
+description: Suggest a new feature or improvement for @compilr-dev/agents
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea for the agents library? We'd love to hear it.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Use Case
+      description: What problem does this solve? What are you building?
+      placeholder: "I'm building a CLI tool that needs to ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How would you like this to work? Include API examples if possible.
+      placeholder: |
+        ```typescript
+        const agent = new Agent({
+          // proposed new option
+        });
+        ```
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the library does this relate to?
+      options:
+        - Agent (core)
+        - LLM Providers
+        - Tools
+        - Skills
+        - Context Management
+        - Permissions / Guardrails
+        - Streaming / Events
+        - Sub-agents
+        - New Provider Support
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered other approaches or workarounds?

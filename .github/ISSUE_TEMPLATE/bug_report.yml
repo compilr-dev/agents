@@ -1,0 +1,91 @@
+name: Bug Report
+description: Report a bug in @compilr-dev/agents
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill out the sections below so we can reproduce and fix the issue.
+
+  - type: input
+    id: version
+    attributes:
+      label: Package Version
+      description: "Check your package.json or run `npm ls @compilr-dev/agents`"
+      placeholder: "0.3.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: provider
+    attributes:
+      label: LLM Provider
+      description: Which provider were you using?
+      options:
+        - Claude (Anthropic)
+        - OpenAI
+        - Gemini (Google)
+        - Ollama (local)
+        - Together AI
+        - Groq
+        - Fireworks AI
+        - Perplexity
+        - OpenRouter
+        - Custom Provider
+        - Not applicable
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the library is affected?
+      options:
+        - Agent (core)
+        - LLM Providers
+        - Tools
+        - Skills
+        - Context Management
+        - Permissions
+        - Guardrails
+        - Streaming / Events
+        - Sub-agents (Task tool)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened? What did you expect?
+      placeholder: |
+        What happened:
+        ...
+
+        What I expected:
+        ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal Reproduction
+      description: A code snippet that reproduces the issue
+      render: typescript
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Your system info
+      placeholder: |
+        - OS: macOS 15 / Ubuntu 24.04 / Windows 11
+        - Node.js: 22.x
+        - TypeScript: 5.x
+      render: markdown
