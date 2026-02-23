@@ -15,6 +15,9 @@
 [![npm version](https://img.shields.io/npm/v/@compilr-dev/agents.svg)](https://www.npmjs.com/package/@compilr-dev/agents)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+> [!WARNING]
+> This package is in beta. APIs may change between minor versions.
+
 ## Features
 
 - **Multi-LLM Support** - 9 providers: Claude, OpenAI, Gemini, Ollama (local), Together AI, Groq, Fireworks, Perplexity, OpenRouter
@@ -180,7 +183,7 @@ import { AnchorManager } from '@compilr-dev/agents';
 
 ## Requirements
 
-- **Node.js** 18 or higher
+- **Node.js** 20 or higher
 - **API Key** for your chosen provider (except Ollama)
 
 ## Peer Dependencies
