@@ -21,10 +21,10 @@
 ## Features
 
 - **Multi-LLM Support** - 9 providers: Claude, OpenAI, Gemini, Ollama (local), Together AI, Groq, Fireworks, Perplexity, OpenRouter
-- **17 Built-in Tools** - File ops, bash, grep, glob, edit, web fetch, sub-agents, todos, backlog, and more
+- **21 Built-in Tools** - File ops, bash, grep, glob, edit, web fetch, sub-agents, todos, backlog, and more
 - **Sub-agents** - Spawn specialized agents for complex tasks (9 built-in agent types)
 - **Context Management** - Token budgeting, compaction, summarization
-- **11 Skills** - Reusable prompts for common workflows
+- **13 Skills** - Reusable prompts for common workflows
 - **Safety Features** - Permissions, 15 built-in guardrails, anchors, rehearsal mode
 - **Streaming** - Real-time event streaming with abort support
 - **Hooks System** - Lifecycle hooks (beforeChat, afterChat, beforeToolCall, afterToolCall)
