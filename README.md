@@ -14,6 +14,9 @@
 
 [![npm version](https://img.shields.io/npm/v/@compilr-dev/agents.svg)](https://www.npmjs.com/package/@compilr-dev/agents)
 [![License: FSL-1.1-MIT](https://img.shields.io/badge/License-FSL--1.1--MIT-blue.svg)](https://fsl.software/)
+[![API Docs](https://img.shields.io/badge/API_Docs-GitHub_Pages-blue)](https://compilr-dev.github.io/agents/)
+
+**[API Reference](https://compilr-dev.github.io/agents/)** | **[llms.txt](https://compilr.dev/llms.txt)** (for AI agents)
 
 > [!WARNING]
 > This package is in beta. APIs may change between minor versions.
