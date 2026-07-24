@@ -1,0 +1,77 @@
+---
+title: Type Aliases
+nav_order: 4
+has_children: true
+---
+
+# Type Aliases
+
+| [AfterIterationHook](TypeAlias.AfterIterationHook.md) |
+| [AfterLLMHook](TypeAlias.AfterLLMHook.md) |
+| [AfterToolHook](TypeAlias.AfterToolHook.md) |
+| [AgentEvent](TypeAlias.AgentEvent.md) |
+| [AgentEventHandler](TypeAlias.AgentEventHandler.md) |
+| [AnchorEventHandler](TypeAlias.AnchorEventHandler.md) |
+| [AnchorEventType](TypeAlias.AnchorEventType.md) |
+| [AnchorPriority](TypeAlias.AnchorPriority.md) |
+| [AnchorScope](TypeAlias.AnchorScope.md) |
+| [AttributeValue](TypeAlias.AttributeValue.md) |
+| [BeforeIterationHook](TypeAlias.BeforeIterationHook.md) |
+| [BeforeLLMHook](TypeAlias.BeforeLLMHook.md) |
+| [BeforeToolHook](TypeAlias.BeforeToolHook.md) |
+| [CombineStrategy](TypeAlias.CombineStrategy.md) |
+| [ContentBlock](TypeAlias.ContentBlock.md) |
+| [ContentBlockType](TypeAlias.ContentBlockType.md) |
+| [ContextCategory](TypeAlias.ContextCategory.md) |
+| [ContextEvent](TypeAlias.ContextEvent.md) |
+| [ContextEventHandler](TypeAlias.ContextEventHandler.md) |
+| [ContextMode](TypeAlias.ContextMode.md) |
+| [DelegationEvent](TypeAlias.DelegationEvent.md) |
+| [Effort](TypeAlias.Effort.md) |
+| [FileAccessType](TypeAlias.FileAccessType.md) |
+| [GuardrailAction](TypeAlias.GuardrailAction.md) |
+| [GuardrailEventHandler](TypeAlias.GuardrailEventHandler.md) |
+| [GuardrailEventType](TypeAlias.GuardrailEventType.md) |
+| [GuardrailTriggeredHandler](TypeAlias.GuardrailTriggeredHandler.md) |
+| [HookEventHandler](TypeAlias.HookEventHandler.md) |
+| [HookEventType](TypeAlias.HookEventType.md) |
+| [ImpactSeverity](TypeAlias.ImpactSeverity.md) |
+| [ImportanceLevel](TypeAlias.ImportanceLevel.md) |
+| [LLMProviderName](TypeAlias.LLMProviderName.md) |
+| [LogLevel](TypeAlias.LogLevel.md) |
+| [MCPClientEventHandler](TypeAlias.MCPClientEventHandler.md) |
+| [MCPClientEventType](TypeAlias.MCPClientEventType.md) |
+| [MCPConnectionStatus](TypeAlias.MCPConnectionStatus.md) |
+| [MCPTransport](TypeAlias.MCPTransport.md) |
+| [MessageRole](TypeAlias.MessageRole.md) |
+| [OTelSDK](TypeAlias.OTelSDK.md) |
+| [OTelSpan](TypeAlias.OTelSpan.md) |
+| [OTelTracer](TypeAlias.OTelTracer.md) |
+| [OnErrorHook](TypeAlias.OnErrorHook.md) |
+| [OperationCategory](TypeAlias.OperationCategory.md) |
+| [PermissionEventHandler](TypeAlias.PermissionEventHandler.md) |
+| [PermissionEventType](TypeAlias.PermissionEventType.md) |
+| [PermissionHandler](TypeAlias.PermissionHandler.md) |
+| [PermissionHandlerResponse](TypeAlias.PermissionHandlerResponse.md) |
+| [PermissionLevel](TypeAlias.PermissionLevel.md) |
+| [PreviewGenerator](TypeAlias.PreviewGenerator.md) |
+| [ProjectMemoryEvent](TypeAlias.ProjectMemoryEvent.md) |
+| [ProjectMemoryEventHandler](TypeAlias.ProjectMemoryEventHandler.md) |
+| [ProjectMemoryEventType](TypeAlias.ProjectMemoryEventType.md) |
+| [RehearsalEventHandler](TypeAlias.RehearsalEventHandler.md) |
+| [RehearsalEventType](TypeAlias.RehearsalEventType.md) |
+| [RehearsalRecommendation](TypeAlias.RehearsalRecommendation.md) |
+| [SpanAttributes](TypeAlias.SpanAttributes.md) |
+| [SpanKind](TypeAlias.SpanKind.md) |
+| [SpanStatus](TypeAlias.SpanStatus.md) |
+| [StreamWriter](TypeAlias.StreamWriter.md) |
+| [ThoroughnessLevel](TypeAlias.ThoroughnessLevel.md) |
+| [TodoStatus](TypeAlias.TodoStatus.md) |
+| [ToolFallbackHandler](TypeAlias.ToolFallbackHandler.md) |
+| [ToolHandler](TypeAlias.ToolHandler.md) |
+| [TracingEvent](TypeAlias.TracingEvent.md) |
+| [TracingEventHandler](TypeAlias.TracingEventHandler.md) |
+| [UsageEvent](TypeAlias.UsageEvent.md) |
+| [UsageEventHandler](TypeAlias.UsageEventHandler.md) |
+| [UsageEventType](TypeAlias.UsageEventType.md) |
+| [VerbosityLevel](TypeAlias.VerbosityLevel.md) |
