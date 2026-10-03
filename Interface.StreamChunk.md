@@ -1,0 +1,154 @@
+---
+title: "StreamChunk"
+parent: Interfaces
+nav_order: 1
+---
+
+
+# Interface: StreamChunk
+
+Defined in: providers/types.ts:112
+
+Streaming chunk types
+
+## Properties
+
+### model?
+
+```ts
+optional model?: string;
+```
+
+Defined in: providers/types.ts:157
+
+Model that generated this response (only present on 'done' chunks)
+
+### stopReason?
+
+```ts
+optional stopReason?: string;
+```
+
+Defined in: providers/types.ts:166
+
+Stop reason (only present on 'done' chunks).
+- 'end_turn': Normal completion
+- 'max_tokens': Hit max_tokens limit
+- 'refusal': Model refused the request (Claude 4.5+)
+- 'context_window_exceeded': Hit context window limit (Claude 4.5+)
+- 'tool_use': Model wants to call a tool
+
+### text?
+
+```ts
+optional text?: string;
+```
+
+Defined in: providers/types.ts:122
+
+### thinking?
+
+```ts
+optional thinking?: {
+  signature?: string;
+  thinking?: string;
+};
+```
+
+Defined in: providers/types.ts:146
+
+Thinking block data (for thinking_start/thinking_end)
+
+#### signature?
+
+```ts
+optional signature?: string;
+```
+
+#### thinking?
+
+```ts
+optional thinking?: string;
+```
+
+### toolCallId?
+
+```ts
+optional toolCallId?: string;
+```
+
+Defined in: providers/types.ts:132
+
+Which tool call a `tool_use_delta` / `tool_use_end` belongs to.
+
+⚠️ Optional for compatibility, but a provider that can emit two tool calls at once MUST set
+it: without an id the agent closes whichever call it saw last, so two calls announced before
+either finishes merge into one slot, the JSON fails to parse, and BOTH are dropped (the turn
+is then reported as output-limit truncation). Measured on `processChunks` before this field
+existed; see tests/agent-parallel-tools.test.ts.
+
+### toolUse?
+
+```ts
+optional toolUse?: {
+  id: string;
+  input?: Record<string, unknown>;
+  name: string;
+  signature?: string;
+};
+```
+
+Defined in: providers/types.ts:133
+
+#### id
+
+```ts
+id: string;
+```
+
+#### input?
+
+```ts
+optional input?: Record<string, unknown>;
+```
+
+#### name
+
+```ts
+name: string;
+```
+
+#### signature?
+
+```ts
+optional signature?: string;
+```
+
+Thought signature for Gemini 3 function calls.
+Only present on first function call in each step.
+
+### type
+
+```ts
+type: 
+  | "text"
+  | "tool_use_start"
+  | "tool_use_delta"
+  | "tool_use_end"
+  | "thinking_start"
+  | "thinking_delta"
+  | "thinking_end"
+  | "done";
+```
+
+Defined in: providers/types.ts:113
+
+### usage?
+
+```ts
+optional usage?: LLMUsage;
+```
+
+Defined in: providers/types.ts:153
+
+Token usage (only present on 'done' chunks)
