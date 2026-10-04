@@ -333,7 +333,7 @@ const openai = new OpenAIProvider({
 
 // Gemini
 const gemini = new GeminiProvider({
-  apiKey: process.env.GOOGLE_API_KEY,
+  apiKey: process.env.GOOGLE_AI_API_KEY,
   model: 'gemini-2.0-flash',
 });
 
