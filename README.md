@@ -24,9 +24,9 @@
 ## Features
 
 - **Multi-LLM Support**: 9 providers -- Claude, OpenAI, Gemini, Ollama (local), Together AI, Groq, Fireworks, Perplexity, OpenRouter
-- **17 Built-in Tools**: File ops, bash, grep, glob, edit, web fetch, sub-agents, todos, backlog, and more
+- **16 Built-in Tools**: File ops, bash, grep, glob, edit, web fetch, sub-agents, todos, backlog, and more
 - **Sub-agents**: Spawn specialized agents for complex tasks (9 built-in agent types)
-- **11 Skills**: Reusable prompt templates for common workflows
+- **13 Skills**: Reusable prompt templates for common workflows
 - **Context Management**: Token budgeting, compaction, summarization
 - **Event Streaming**: Real-time execution monitoring with typed events and abort support
 - **Anchors**: Critical information that survives context compaction
@@ -322,24 +322,24 @@ import {
 // Claude (recommended)
 const claude = new ClaudeProvider({
   apiKey: process.env.ANTHROPIC_API_KEY,
-  model: 'claude-sonnet-4-20250514',
+  model: 'claude-sonnet-5-5',
 });
 
 // OpenAI
 const openai = new OpenAIProvider({
   apiKey: process.env.OPENAI_API_KEY,
-  model: 'gpt-4o',
+  model: 'gpt-6-sol',
 });
 
 // Gemini
 const gemini = new GeminiProvider({
   apiKey: process.env.GOOGLE_AI_API_KEY,
-  model: 'gemini-2.0-flash',
+  model: 'gemini-3.5-flash',
 });
 
 // Ollama (local, no API key)
 const ollama = new OllamaProvider({
-  model: 'llama3.1:8b',
+  model: 'qwen2.5:7b',
   baseUrl: 'http://localhost:11434',
 });
 ```
